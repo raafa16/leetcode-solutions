@@ -19,9 +19,9 @@
 def single_number(nums)
   mapping = {}
   nums.each do |num|
-      my_key = num.to_s
-      count = mapping.has_key?(my_key) ?  mapping[my_key] + 1 : 1
-      mapping[my_key] = count 
+    my_key = num.to_s
+    count = mapping.has_key?(my_key) ?  mapping[my_key] + 1 : 1
+    mapping[my_key] = count 
   end
   mapping.key(1).to_i
 end

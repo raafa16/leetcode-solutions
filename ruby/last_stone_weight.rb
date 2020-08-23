@@ -25,15 +25,15 @@ def last_stone_weight(stones)
   return stones[0] if stones.length == 1
 
   while stones.length > 1 do
-      x, y = find_two_heaviest(stones)
-      if x==y
-          stones.slice!(stones.index(x))
-          stones.slice!(stones.index(y))
-      elsif x < y
-          stones.slice!(stones.index(x))
-          new_weight = y - x
-          stones[stones.index(y)] = new_weight
-      end
+    x, y = find_two_heaviest(stones)
+    if x==y
+      stones.slice!(stones.index(x))
+      stones.slice!(stones.index(y))
+    elsif x < y
+      stones.slice!(stones.index(x))
+      new_weight = y - x
+      stones[stones.index(y)] = new_weight
+    end
   end
 
   stones.empty? ? 0 : stones[0]
